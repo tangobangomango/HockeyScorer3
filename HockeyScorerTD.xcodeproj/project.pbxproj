@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E2A3C1C119B5122600284F74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3C1C019B5122600284F74 /* Foundation.framework */; };
+		E2A3C1C319B5122600284F74 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3C1C219B5122600284F74 /* CoreGraphics.framework */; };
+		E2A3C1C519B5122600284F74 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3C1C419B5122600284F74 /* UIKit.framework */; };
+		E2A3C1CB19B5122600284F74 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2A3C1C919B5122600284F74 /* InfoPlist.strings */; };
+		E2A3C1CD19B5122600284F74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A3C1CC19B5122600284F74 /* main.m */; };
+		E2A3C1D119B5122600284F74 /* HockeyScorerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A3C1D019B5122600284F74 /* HockeyScorerAppDelegate.m */; };
+		E2A3C1D419B5122600284F74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2A3C1D219B5122600284F74 /* Main.storyboard */; };
+		E2A3C1D719B5122600284F74 /* HockeyScorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A3C1D619B5122600284F74 /* HockeyScorerViewController.m */; };
+		E2A3C1D919B5122600284F74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2A3C1D819B5122600284F74 /* Images.xcassets */; };
+		E2A3C1E019B5122600284F74 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3C1DF19B5122600284F74 /* XCTest.framework */; };
+		E2A3C1E119B5122600284F74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3C1C019B5122600284F74 /* Foundation.framework */; };
+		E2A3C1E219B5122600284F74 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3C1C419B5122600284F74 /* UIKit.framework */; };
+		E2A3C1EA19B5122600284F74 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2A3C1E819B5122600284F74 /* InfoPlist.strings */; };
+		E2A3C1EC19B5122600284F74 /* HockeyScorerTDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A3C1EB19B5122600284F74 /* HockeyScorerTDTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2A3C1E319B5122600284F74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2A3C1B519B5122600284F74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2A3C1BC19B5122600284F74;
+			remoteInfo = HockeyScorerTD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E2A3C1BD19B5122600284F74 /* HockeyScorerTD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HockeyScorerTD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2A3C1C019B5122600284F74 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E2A3C1C219B5122600284F74 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E2A3C1C419B5122600284F74 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E2A3C1C819B5122600284F74 /* HockeyScorerTD-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HockeyScorerTD-Info.plist"; sourceTree = "<group>"; };
+		E2A3C1CA19B5122600284F74 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E2A3C1CC19B5122600284F74 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E2A3C1CE19B5122600284F74 /* HockeyScorerTD-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HockeyScorerTD-Prefix.pch"; sourceTree = "<group>"; };
+		E2A3C1CF19B5122600284F74 /* HockeyScorerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HockeyScorerAppDelegate.h; sourceTree = "<group>"; };
+		E2A3C1D019B5122600284F74 /* HockeyScorerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HockeyScorerAppDelegate.m; sourceTree = "<group>"; };
+		E2A3C1D319B5122600284F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E2A3C1D519B5122600284F74 /* HockeyScorerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HockeyScorerViewController.h; sourceTree = "<group>"; };
+		E2A3C1D619B5122600284F74 /* HockeyScorerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HockeyScorerViewController.m; sourceTree = "<group>"; };
+		E2A3C1D819B5122600284F74 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E2A3C1DE19B5122600284F74 /* HockeyScorerTDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HockeyScorerTDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2A3C1DF19B5122600284F74 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E2A3C1E719B5122600284F74 /* HockeyScorerTDTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HockeyScorerTDTests-Info.plist"; sourceTree = "<group>"; };
+		E2A3C1E919B5122600284F74 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E2A3C1EB19B5122600284F74 /* HockeyScorerTDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HockeyScorerTDTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2A3C1BA19B5122600284F74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2A3C1C319B5122600284F74 /* CoreGraphics.framework in Frameworks */,
+				E2A3C1C519B5122600284F74 /* UIKit.framework in Frameworks */,
+				E2A3C1C119B5122600284F74 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2A3C1DB19B5122600284F74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2A3C1E019B5122600284F74 /* XCTest.framework in Frameworks */,
+				E2A3C1E219B5122600284F74 /* UIKit.framework in Frameworks */,
+				E2A3C1E119B5122600284F74 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E2A3C1B419B5122600284F74 = {
+			isa = PBXGroup;
+			children = (
+				E2A3C1C619B5122600284F74 /* HockeyScorerTD */,
+				E2A3C1E519B5122600284F74 /* HockeyScorerTDTests */,
+				E2A3C1BF19B5122600284F74 /* Frameworks */,
+				E2A3C1BE19B5122600284F74 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E2A3C1BE19B5122600284F74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2A3C1BD19B5122600284F74 /* HockeyScorerTD.app */,
+				E2A3C1DE19B5122600284F74 /* HockeyScorerTDTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2A3C1BF19B5122600284F74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2A3C1C019B5122600284F74 /* Foundation.framework */,
+				E2A3C1C219B5122600284F74 /* CoreGraphics.framework */,
+				E2A3C1C419B5122600284F74 /* UIKit.framework */,
+				E2A3C1DF19B5122600284F74 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2A3C1C619B5122600284F74 /* HockeyScorerTD */ = {
+			isa = PBXGroup;
+			children = (
+				E2A3C1CF19B5122600284F74 /* HockeyScorerAppDelegate.h */,
+				E2A3C1D019B5122600284F74 /* HockeyScorerAppDelegate.m */,
+				E2A3C1D219B5122600284F74 /* Main.storyboard */,
+				E2A3C1D519B5122600284F74 /* HockeyScorerViewController.h */,
+				E2A3C1D619B5122600284F74 /* HockeyScorerViewController.m */,
+				E2A3C1D819B5122600284F74 /* Images.xcassets */,
+				E2A3C1C719B5122600284F74 /* Supporting Files */,
+			);
+			path = HockeyScorerTD;
+			sourceTree = "<group>";
+		};
+		E2A3C1C719B5122600284F74 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2A3C1C819B5122600284F74 /* HockeyScorerTD-Info.plist */,
+				E2A3C1C919B5122600284F74 /* InfoPlist.strings */,
+				E2A3C1CC19B5122600284F74 /* main.m */,
+				E2A3C1CE19B5122600284F74 /* HockeyScorerTD-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2A3C1E519B5122600284F74 /* HockeyScorerTDTests */ = {
+			isa = PBXGroup;
+			children = (
+				E2A3C1EB19B5122600284F74 /* HockeyScorerTDTests.m */,
+				E2A3C1E619B5122600284F74 /* Supporting Files */,
+			);
+			path = HockeyScorerTDTests;
+			sourceTree = "<group>";
+		};
+		E2A3C1E619B5122600284F74 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2A3C1E719B5122600284F74 /* HockeyScorerTDTests-Info.plist */,
+				E2A3C1E819B5122600284F74 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2A3C1BC19B5122600284F74 /* HockeyScorerTD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2A3C1EF19B5122600284F74 /* Build configuration list for PBXNativeTarget "HockeyScorerTD" */;
+			buildPhases = (
+				E2A3C1B919B5122600284F74 /* Sources */,
+				E2A3C1BA19B5122600284F74 /* Frameworks */,
+				E2A3C1BB19B5122600284F74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HockeyScorerTD;
+			productName = HockeyScorerTD;
+			productReference = E2A3C1BD19B5122600284F74 /* HockeyScorerTD.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E2A3C1DD19B5122600284F74 /* HockeyScorerTDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2A3C1F219B5122600284F74 /* Build configuration list for PBXNativeTarget "HockeyScorerTDTests" */;
+			buildPhases = (
+				E2A3C1DA19B5122600284F74 /* Sources */,
+				E2A3C1DB19B5122600284F74 /* Frameworks */,
+				E2A3C1DC19B5122600284F74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2A3C1E419B5122600284F74 /* PBXTargetDependency */,
+			);
+			name = HockeyScorerTDTests;
+			productName = HockeyScorerTDTests;
+			productReference = E2A3C1DE19B5122600284F74 /* HockeyScorerTDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2A3C1B519B5122600284F74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HockeyScorer;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = TDG;
+				TargetAttributes = {
+					E2A3C1DD19B5122600284F74 = {
+						TestTargetID = E2A3C1BC19B5122600284F74;
+					};
+				};
+			};
+			buildConfigurationList = E2A3C1B819B5122600284F74 /* Build configuration list for PBXProject "HockeyScorerTD" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E2A3C1B419B5122600284F74;
+			productRefGroup = E2A3C1BE19B5122600284F74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2A3C1BC19B5122600284F74 /* HockeyScorerTD */,
+				E2A3C1DD19B5122600284F74 /* HockeyScorerTDTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2A3C1BB19B5122600284F74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2A3C1D919B5122600284F74 /* Images.xcassets in Resources */,
+				E2A3C1CB19B5122600284F74 /* InfoPlist.strings in Resources */,
+				E2A3C1D419B5122600284F74 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2A3C1DC19B5122600284F74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2A3C1EA19B5122600284F74 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2A3C1B919B5122600284F74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2A3C1CD19B5122600284F74 /* main.m in Sources */,
+				E2A3C1D119B5122600284F74 /* HockeyScorerAppDelegate.m in Sources */,
+				E2A3C1D719B5122600284F74 /* HockeyScorerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2A3C1DA19B5122600284F74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2A3C1EC19B5122600284F74 /* HockeyScorerTDTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2A3C1E419B5122600284F74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2A3C1BC19B5122600284F74 /* HockeyScorerTD */;
+			targetProxy = E2A3C1E319B5122600284F74 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E2A3C1C919B5122600284F74 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2A3C1CA19B5122600284F74 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E2A3C1D219B5122600284F74 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2A3C1D319B5122600284F74 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E2A3C1E819B5122600284F74 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2A3C1E919B5122600284F74 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E2A3C1ED19B5122600284F74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E2A3C1EE19B5122600284F74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2A3C1F019B5122600284F74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HockeyScorerTD/HockeyScorerTD-Prefix.pch";
+				INFOPLIST_FILE = "HockeyScorerTD/HockeyScorerTD-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E2A3C1F119B5122600284F74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HockeyScorerTD/HockeyScorerTD-Prefix.pch";
+				INFOPLIST_FILE = "HockeyScorerTD/HockeyScorerTD-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E2A3C1F319B5122600284F74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HockeyScorerTD.app/HockeyScorerTD";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HockeyScorerTD/HockeyScorerTD-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HockeyScorerTDTests/HockeyScorerTDTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E2A3C1F419B5122600284F74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HockeyScorerTD.app/HockeyScorerTD";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HockeyScorerTD/HockeyScorerTD-Prefix.pch";
+				INFOPLIST_FILE = "HockeyScorerTDTests/HockeyScorerTDTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2A3C1B819B5122600284F74 /* Build configuration list for PBXProject "HockeyScorerTD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2A3C1ED19B5122600284F74 /* Debug */,
+				E2A3C1EE19B5122600284F74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2A3C1EF19B5122600284F74 /* Build configuration list for PBXNativeTarget "HockeyScorerTD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2A3C1F019B5122600284F74 /* Debug */,
+				E2A3C1F119B5122600284F74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E2A3C1F219B5122600284F74 /* Build configuration list for PBXNativeTarget "HockeyScorerTDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2A3C1F319B5122600284F74 /* Debug */,
+				E2A3C1F419B5122600284F74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2A3C1B519B5122600284F74 /* Project object */;
+}
