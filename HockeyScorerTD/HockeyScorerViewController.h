@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddGameViewController.h"
 
-@interface HockeyScorerViewController : UIViewController
+@interface HockeyScorerViewController : UITableViewController <AddGameViewControllerDelegate>
+
+
 
 @end
