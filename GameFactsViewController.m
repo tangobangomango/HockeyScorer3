@@ -1,19 +1,19 @@
 //
-//  AddGameViewController.m
+//  GameFactsViewController.m
 //  HockeyScorerTD
 //
 //  Created by Anne West on 9/2/14.
 //  Copyright (c) 2014 TDG. All rights reserved.
 //
 
-#import "AddGameViewController.h"
+#import "GameFactsViewController.h"
 #import "Game.h"
 
-@interface AddGameViewController ()
+@interface GameFactsViewController ()
 
 @end
 
-@implementation AddGameViewController
+@implementation GameFactsViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -63,7 +63,7 @@
 {
     //Use delegate to execute cancel
     //method here is a delegate method listed above and defined in the HSVC
-    [self.delegate addGameViewControllerDidCancel:self];
+    [self.delegate gameFactsViewControllerDidCancel:self];
 }
 
 -(IBAction) done
@@ -78,12 +78,12 @@
         game.opponent = self.opponentField.text;
         //game.dateOfGame = self.
     
-        [self.delegate addGameViewController:self didFinishAddingGame:game];
+        [self.delegate gameFactsViewController:self didFinishAddingGame:game];
         
     } else {
         self.gameToEdit.opponent = self.opponentField.text;//updates data model; will update display in delaegate method
         
-        [self.delegate addGameViewController: self didFinishEditingGame:self.gameToEdit];
+        [self.delegate gameFactsViewController: self didFinishEditingGame:self.gameToEdit];
     }
         
     

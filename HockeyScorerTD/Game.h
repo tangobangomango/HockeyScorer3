@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Game : NSObject
+@interface Game : NSObject <NSCoding>//conforms to this protocol so data can be prepared for read/write to file
 
 @property (nonatomic, strong) NSString *opponent;
 @property (nonatomic, strong) NSDate *dateOfGame;
