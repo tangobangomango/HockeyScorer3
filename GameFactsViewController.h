@@ -30,6 +30,12 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+- (IBAction)datePickerChanged:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UITableViewCell *datePickerCell;
+@property (nonatomic, assign) BOOL datePickerIsShowing;
+@property (nonatomic, strong) UITextField *activeTextField;
 
 @property (nonatomic, strong) Game *gameToEdit;//will be nil for a new game; will hold game data if game already exists. Will be used in viewDidLoad of the GFVC and loaded in the delegate methods in HSVC
 

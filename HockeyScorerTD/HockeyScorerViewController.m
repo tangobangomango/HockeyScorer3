@@ -85,7 +85,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-
+    
 
 }
 
@@ -176,6 +176,9 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:newRowIndex inSection:0];
     NSArray *indexPaths = @[indexPath];
     [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    //UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];//get the right cell
+    //[self configureDataForCell:cell withGame:game];//puts the game data into the labels in the cell
     
     [self saveGames];//write the current data to the file
     
