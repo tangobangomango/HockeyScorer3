@@ -211,7 +211,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="1006" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czZ-U5-Tnq">
-                                <rect key="frame" x="219" y="266" width="78" height="60"/>
+                                <rect key="frame" x="218" y="266" width="78" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="plus">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -356,17 +356,27 @@
                     <navigationItem key="navigationItem" id="Aft-d8-ZOy"/>
                     <connections>
                         <outlet property="dateLabel" destination="OhT-fl-e3e" id="Pal-VF-Sy6"/>
-                        <outlet property="labelBlocks" destination="NWB-US-jc4" id="NUp-Qu-u8q"/>
-                        <outlet property="labelFaceoffsLost" destination="Px9-nq-qa4" id="Dnn-ee-VWJ"/>
-                        <outlet property="labelFaceoffsWon" destination="VLC-Gh-E0W" id="tsF-ij-SmO"/>
-                        <outlet property="labelGiveaways" destination="czZ-U5-Tnq" id="PP5-hO-zzf"/>
-                        <outlet property="labelPassesComplete" destination="wFq-4M-cr8" id="cEl-fq-mf0"/>
-                        <outlet property="labelPassesNotComplete" destination="Dsr-xh-a7f" id="R8A-JX-EDX"/>
-                        <outlet property="labelShifts" destination="wsg-G4-eAH" id="EYX-Xp-4z4"/>
-                        <outlet property="labelShotsNotOnGoal" destination="Cng-s5-pfJ" id="IYz-6G-xdV"/>
+                        <outlet property="labelBlocks" destination="PUA-lZ-fVR" id="8Sq-Zt-Cb8"/>
+                        <outlet property="labelFaceoffsLost" destination="8qK-E3-lxK" id="tIs-Gf-LJh"/>
+                        <outlet property="labelFaceoffsWon" destination="9GL-sK-C4L" id="8Ni-23-fWs"/>
+                        <outlet property="labelGiveaways" destination="WwA-O5-hzk" id="mFZ-mu-SCu"/>
+                        <outlet property="labelPassesComplete" destination="B5S-Zm-dTO" id="1dc-dM-HIm"/>
+                        <outlet property="labelPassesNotComplete" destination="l3W-Ff-S01" id="L05-xy-kBJ"/>
+                        <outlet property="labelShifts" destination="EaI-O9-FHa" id="t4q-j6-jXs"/>
+                        <outlet property="labelShotsNotOnGoal" destination="1ms-VS-ehF" id="vM2-1t-f63"/>
                         <outlet property="labelShotsOnGoal" destination="QQD-A3-x7G" id="7ob-Sc-O6b"/>
                         <outlet property="labelSubtractionAbleState" destination="zHz-1h-egz" id="boi-Qp-JdW"/>
-                        <outlet property="labelTakeaways" destination="kxz-LR-vDn" id="w6a-2r-9np"/>
+                        <outlet property="labelTakeaways" destination="dNE-mC-aRx" id="jBw-xs-b81"/>
+                        <outlet property="outletBlocks" destination="NWB-US-jc4" id="5Qi-6g-9NY"/>
+                        <outlet property="outletFaceoffsLost" destination="Px9-nq-qa4" id="ldb-xI-kX0"/>
+                        <outlet property="outletFaceoffsWon" destination="VLC-Gh-E0W" id="efc-AI-Ysq"/>
+                        <outlet property="outletGiveaways" destination="czZ-U5-Tnq" id="0Fv-ms-agN"/>
+                        <outlet property="outletPassesComplete" destination="wFq-4M-cr8" id="DsT-P4-HX4"/>
+                        <outlet property="outletPassesNotComplete" destination="Dsr-xh-a7f" id="hhO-Yd-zTp"/>
+                        <outlet property="outletShifts" destination="wsg-G4-eAH" id="VZT-OE-CLN"/>
+                        <outlet property="outletShotsNotOnGoal" destination="Cng-s5-pfJ" id="bZG-gZ-DLA"/>
+                        <outlet property="outletShotsOnGoal" destination="HMI-Ri-QTe" id="oNU-6e-w9s"/>
+                        <outlet property="outletTakeaways" destination="kxz-LR-vDn" id="TBz-1P-0fT"/>
                         <outlet property="subtractionSwitch" destination="FwP-db-BJz" id="or0-oN-D7a"/>
                         <outletCollection property="actionButtonCollection" destination="HMI-Ri-QTe" id="dhz-js-lVh"/>
                         <outletCollection property="actionButtonCollection" destination="wFq-4M-cr8" id="xWa-ho-ZDi"/>
