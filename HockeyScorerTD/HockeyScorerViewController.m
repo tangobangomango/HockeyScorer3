@@ -218,6 +218,8 @@
     
 }
 
+#pragma mark - for segues to game add/edit navigation controller and performance tab contoller
+
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     //check for proper seque
@@ -243,6 +245,16 @@
         //this identifies what game data to load to edit
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         controller.gameToEdit = _games[indexPath.row];
+        
+    } else if ([segue.identifier isEqualToString:@"GameDetails"]) {
+        
+        UITabBarController *tabBarController = segue.destinationViewController;
+        PlayerActionsViewController *controller = (PlayerActionsViewController *)[[tabBarController viewControllers] objectAtIndex:0];
+        controller.delegate = self;
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        controller.gameToEditPerformance = _games[indexPath.row];
+        
     }
 }
 

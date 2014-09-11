@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-//Define the delegate protocol to let this controller send data to the HockeyScorerViewContoler (the game list)
+//Define the delegate protocol to let this controller send data to the HockeyScorerViewController (the game list)
 @class GameFactsViewController;
 @class Game;
 
