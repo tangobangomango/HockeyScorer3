@@ -34,6 +34,7 @@
 //set name of data file and construct full path
 - (NSString *) dataFilePath
 {
+    NSLog(@"%@", [[self documentsDirectory] stringByAppendingPathComponent:@"HockeyScorer.plist"]);
     return [[self documentsDirectory] stringByAppendingPathComponent:@"HockeyScorer.plist"];
 }
 
@@ -191,7 +192,7 @@
     //edit already made in data model in GFVC
     //need to update display
     
-    NSInteger index = [_games indexOfObject: game];//locate the item being editied in the games array
+    NSInteger index = [_games indexOfObject: game];//locate the item being edited in the games array
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];//get the right cell
     
@@ -216,6 +217,13 @@
     [tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
     
     
+}
+
+#pragma  mark - delegate methods for PlayersActionsVC
+
+- (void) playerActionsViewController: (PlayerActionsViewController *) controller didEditGameData: (Game *) game
+{
+    [self saveGames];
 }
 
 #pragma mark - for segues to game add/edit navigation controller and performance tab contoller

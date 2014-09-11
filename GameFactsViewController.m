@@ -207,7 +207,7 @@
         [self.delegate gameFactsViewController:self didFinishAddingGame:game];
         
     } else {
-        self.gameToEdit.opponent = self.opponentField.text;//updates data model; will update display in delaegate method
+        self.gameToEdit.opponent = self.opponentField.text;//updates data model; will update display in delegate method
         self.gameToEdit.dateOfGame = [self convertToDate:self.dateLabel.text withFormat:@"MMM d, yyyy"];
         
         [self.delegate gameFactsViewController: self didFinishEditingGame:self.gameToEdit];
