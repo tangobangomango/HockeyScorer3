@@ -38,6 +38,8 @@
     return [[self documentsDirectory] stringByAppendingPathComponent:@"HockeyScorer.plist"];
 }
 
+//Must remember to adopt NSCoding in Game class and implement all keys for decoding and encodong
+
 - (void) loadGames
 {
     NSString *path = [self dataFilePath];//for convenience below
