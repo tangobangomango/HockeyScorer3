@@ -34,7 +34,7 @@
 //set name of data file and construct full path
 - (NSString *) dataFilePath
 {
-    NSLog(@"%@", [[self documentsDirectory] stringByAppendingPathComponent:@"HockeyScorer.plist"]);
+    //NSLog(@"%@", [[self documentsDirectory] stringByAppendingPathComponent:@"HockeyScorer.plist"]);
     return [[self documentsDirectory] stringByAppendingPathComponent:@"HockeyScorer.plist"];
 }
 
@@ -223,7 +223,10 @@
 
 - (void) playerActionsViewController: (PlayerActionsViewController *) controller didEditGameData: (Game *) game
 {
+    NSLog(@"Paased back shots %ld", (long) game.shotsOnGoal);
     [self saveGames];
+    
+    
 }
 
 #pragma mark - for segues to game add/edit navigation controller and performance tab contoller
@@ -261,7 +264,9 @@
         controller.delegate = self;
         
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        
         controller.gameToEditPerformance = _games[indexPath.row];
+        NSLog(@"Data passed %ld", (long)controller.gameToEditPerformance.shotsOnGoal);
         
     }
 }
