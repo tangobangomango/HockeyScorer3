@@ -22,6 +22,7 @@
     if (self) {
         self.opponent = [aDecoder decodeObjectForKey:@"Opponent"];
         self.dateOfGame = [aDecoder decodeObjectForKey:@"DateOfGame"];
+        self.shotsOnGoal = [aDecoder decodeIntegerForKey:@"ShotsOnGoal"];
     }
     return self;
 }
@@ -33,6 +34,7 @@
     //separate encoder for each property
     [aCoder encodeObject:self.opponent forKey:@"Opponent"];
     [aCoder encodeObject:self.dateOfGame forKey:@"DateOfGame"];
+    [aCoder encodeInteger:self.shotsOnGoal forKey:@"ShotsOnGoal"];
     
     
 }
