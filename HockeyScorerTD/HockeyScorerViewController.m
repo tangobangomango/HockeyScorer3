@@ -8,6 +8,8 @@
 
 #import "HockeyScorerViewController.h"
 #import "Game.h"
+//So we can get the title of the game list
+#import "Season.h"
 
 @interface HockeyScorerViewController ()
 
@@ -86,7 +88,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    //Puts name of season in the nav bar
+    //season not alocated in this VC but is passed via segue
+    //Will need to see if this is how it should be done in the PAVC to load the title
+    self.title = self.season.seasonName;
     
     
 

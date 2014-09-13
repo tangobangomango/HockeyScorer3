@@ -10,8 +10,13 @@
 #import "GameFactsViewController.h"
 #import "PlayerActionsViewController.h"
 
+//So can add a property with the season in it so can display the season name in the title
+@class Season;
+
+
 @interface HockeyScorerViewController : UITableViewController <GameFactsViewControllerDelegate, PlayerActionsViewControllerDelegate>
 
+@property (nonatomic, strong) Season *season;
 
 
 @end

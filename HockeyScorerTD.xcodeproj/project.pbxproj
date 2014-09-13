@@ -30,6 +30,11 @@
 		E2A3C1EC19B5122600284F74 /* HockeyScorerTDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A3C1EB19B5122600284F74 /* HockeyScorerTDTests.m */; };
 		E2C70AE119BE1A2800ED041D /* PlayerActionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C70AE019BE1A2800ED041D /* PlayerActionsViewController.m */; };
 		E2C70AE419BE1D4200ED041D /* TeamResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C70AE319BE1D4200ED041D /* TeamResultsViewController.m */; };
+		E2DCB4BE19C3BC67004837DC /* rink.png in Resources */ = {isa = PBXBuildFile; fileRef = E2DCB4BD19C3BC67004837DC /* rink.png */; };
+		E2DCB4C019C3BC76004837DC /* faceoff.png in Resources */ = {isa = PBXBuildFile; fileRef = E2DCB4BF19C3BC76004837DC /* faceoff.png */; };
+		E2DCB4C219C49CA6004837DC /* rink3.png in Resources */ = {isa = PBXBuildFile; fileRef = E2DCB4C119C49CA6004837DC /* rink3.png */; };
+		E2DCB4C519C4A010004837DC /* SeasonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DCB4C419C4A010004837DC /* SeasonsViewController.m */; };
+		E2DCB4C819C4AE92004837DC /* Season.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DCB4C719C4AE92004837DC /* Season.m */; };
 		E2FAF29D19C34F9E004C2172 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FAF29C19C34F9E004C2172 /* AVFoundation.framework */; };
 		E2FAF2A019C3508D004C2172 /* ButtonTap.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2FAF29E19C3508D004C2172 /* ButtonTap.wav */; };
 		E2FAF2A119C3508D004C2172 /* SecondBeep.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2FAF29F19C3508D004C2172 /* SecondBeep.wav */; };
@@ -79,6 +84,13 @@
 		E2C70AE019BE1A2800ED041D /* PlayerActionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerActionsViewController.m; sourceTree = "<group>"; };
 		E2C70AE219BE1D4200ED041D /* TeamResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamResultsViewController.h; sourceTree = "<group>"; };
 		E2C70AE319BE1D4200ED041D /* TeamResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamResultsViewController.m; sourceTree = "<group>"; };
+		E2DCB4BD19C3BC67004837DC /* rink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rink.png; sourceTree = "<group>"; };
+		E2DCB4BF19C3BC76004837DC /* faceoff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = faceoff.png; sourceTree = "<group>"; };
+		E2DCB4C119C49CA6004837DC /* rink3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rink3.png; sourceTree = "<group>"; };
+		E2DCB4C319C4A010004837DC /* SeasonsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SeasonsViewController.h; path = ../SeasonsViewController.h; sourceTree = "<group>"; };
+		E2DCB4C419C4A010004837DC /* SeasonsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SeasonsViewController.m; path = ../SeasonsViewController.m; sourceTree = "<group>"; };
+		E2DCB4C619C4AE92004837DC /* Season.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Season.h; sourceTree = "<group>"; };
+		E2DCB4C719C4AE92004837DC /* Season.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Season.m; sourceTree = "<group>"; };
 		E2FAF29C19C34F9E004C2172 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E2FAF29E19C3508D004C2172 /* ButtonTap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ButtonTap.wav; sourceTree = "<group>"; };
 		E2FAF29F19C3508D004C2172 /* SecondBeep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SecondBeep.wav; sourceTree = "<group>"; };
@@ -112,6 +124,8 @@
 		E258FD7719C22806003C4BB9 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E2DCB4C319C4A010004837DC /* SeasonsViewController.h */,
+				E2DCB4C419C4A010004837DC /* SeasonsViewController.m */,
 				E20127DF19B63884005D0D8E /* GameFactsViewController.h */,
 				E20127E019B63884005D0D8E /* GameFactsViewController.m */,
 				E2C70AE219BE1D4200ED041D /* TeamResultsViewController.h */,
@@ -129,6 +143,8 @@
 		E258FD7819C22819003C4BB9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E2DCB4C619C4AE92004837DC /* Season.h */,
+				E2DCB4C719C4AE92004837DC /* Season.m */,
 				E20127DC19B62628005D0D8E /* Game.h */,
 				E20127DD19B62628005D0D8E /* Game.m */,
 			);
@@ -187,6 +203,9 @@
 		E2A3C1C719B5122600284F74 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E2DCB4C119C49CA6004837DC /* rink3.png */,
+				E2DCB4BF19C3BC76004837DC /* faceoff.png */,
+				E2DCB4BD19C3BC67004837DC /* rink.png */,
 				E2FAF29E19C3508D004C2172 /* ButtonTap.wav */,
 				E2FAF29F19C3508D004C2172 /* SecondBeep.wav */,
 				E2A3C1C819B5122600284F74 /* HockeyScorerTD-Info.plist */,
@@ -293,6 +312,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2A3C1D919B5122600284F74 /* Images.xcassets in Resources */,
+				E2DCB4BE19C3BC67004837DC /* rink.png in Resources */,
+				E2DCB4C019C3BC76004837DC /* faceoff.png in Resources */,
+				E2DCB4C219C49CA6004837DC /* rink3.png in Resources */,
 				E258FD7419C22614003C4BB9 /* plus@2x.png in Resources */,
 				E2FAF2A019C3508D004C2172 /* ButtonTap.wav in Resources */,
 				E258FD7319C22614003C4BB9 /* minus@2x.png in Resources */,
@@ -319,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2DCB4C819C4AE92004837DC /* Season.m in Sources */,
 				E2A3C1CD19B5122600284F74 /* main.m in Sources */,
 				E2A3C1D119B5122600284F74 /* HockeyScorerAppDelegate.m in Sources */,
 				E2A3C1D719B5122600284F74 /* HockeyScorerViewController.m in Sources */,
@@ -327,6 +350,7 @@
 				E2C70AE419BE1D4200ED041D /* TeamResultsViewController.m in Sources */,
 				E258FD6E19C224A4003C4BB9 /* PlayerResultsViewController.m in Sources */,
 				E2C70AE119BE1A2800ED041D /* PlayerActionsViewController.m in Sources */,
+				E2DCB4C519C4A010004837DC /* SeasonsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

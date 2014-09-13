@@ -4,6 +4,28 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
+        <!--Seasons View Controller - Seasons-->
+        <scene sceneID="Uqr-n3-YWe">
+            <objects>
+                <tableViewController id="26E-id-wx4" customClass="SeasonsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eT5-fn-PW6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="26E-id-wx4" id="n6F-Xv-Lfs"/>
+                            <outlet property="delegate" destination="26E-id-wx4" id="hcS-o6-gJW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Seasons" id="1hb-yV-UTm"/>
+                    <connections>
+                        <segue destination="ImQ-E9-H1a" kind="push" identifier="ShowGames" id="EYS-of-nzc"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pgI-DZ-7zX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292" y="-99"/>
+        </scene>
         <!--Hockey Scorer View Controller - Games-->
         <scene sceneID="KBT-Od-GJ2">
             <objects>
@@ -536,12 +558,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ImQ-E9-H1a" kind="relationship" relationship="rootViewController" id="bPb-oI-Rxc"/>
+                        <segue destination="26E-id-wx4" kind="relationship" relationship="rootViewController" id="Kay-oV-PmE"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="suK-1N-gUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128" y="-110"/>
+            <point key="canvasLocation" x="-98" y="-99"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sdJ-YB-9qq">
