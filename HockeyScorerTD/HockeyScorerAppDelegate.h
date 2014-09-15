@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface HockeyScorerAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

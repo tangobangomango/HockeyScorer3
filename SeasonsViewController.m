@@ -7,15 +7,16 @@
 //
 
 #import "SeasonsViewController.h"
+
+//needs all objects and next level view controllers
 #import "Season.h"
-// needed so can pass the season name along. See prepareForSegue
+// needed so can pass the season info along. See prepareForSegue
 #import "GameListViewController.h"
+#import "Game.h"
+#import "DataModel.h"
 
 
 @interface SeasonsViewController ()
-{
-    NSMutableArray *_seasons;//array of Seasons
-}
 
 @end
 
@@ -33,8 +34,11 @@
 }
  */
 
+
+
+
 //so will be able to load saved data from the file
--(id) initWithCoder:(NSCoder *)aDecoder
+/*-(id) initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
     
@@ -60,10 +64,18 @@
     season.seasonName = @"2014-15 CYA U12";
     [_seasons addObject:season];
         
+        for (Season *season  in _seasons) {
+            Game *game = [[Game alloc] init];
+            game.opponent = @"Opponent";
+            game.dateOfGame = [NSDate date];
+            
+            [season.games addObject:game];
+        }
+        
     }
     return self;
     
-}
+}*/
 
 - (void)viewDidLoad
 {
@@ -88,7 +100,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_seasons count];
+    return [self.dataModel.seasons count];
 }
 
 
@@ -106,7 +118,7 @@
     }
     
     //load the data into the cells and add a detail disclosure button (this button was added via storyboard in the games list
-    Season *season =_seasons[indexPath.row];
+    Season *season =self.dataModel.seasons[indexPath.row];
     cell.textLabel.text = season.seasonName;
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     
@@ -118,7 +130,7 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //so we can pass the season name to the Games list/GLVC
-    Season *season = _seasons[indexPath.row];
+    Season *season = self.dataModel.seasons[indexPath.row];
     
     
     //sender is the season
@@ -136,10 +148,10 @@
     //Locates the SFVC and passes appropriate season to it
     SeasonFactsViewController *controller = (SeasonFactsViewController *) navigationController.topViewController;
     controller.delegate = self;
-    Season *season = _seasons[indexPath.row];
+    Season *season = self.dataModel.seasons[indexPath.row];
     controller.seasonToEdit = season;
     
-    //Notice here that controller is the navigation controller not the GFVC that is presented
+    //Notice here that controller is the navigation controller that contains the SFVC, not the GFVC that is presented
     [self presentViewController:navigationController animated:YES completion:nil];
 }
 
@@ -152,9 +164,9 @@
 
 - (void) seasonFactsViewController:(SeasonFactsViewController *)controller didFinishAddingSeason:(Season *)season
 {
-    NSInteger newRowIndex = [_seasons count]; //get location to add new record (season)
+    NSInteger newRowIndex = [self.dataModel.seasons count]; //get location to add new record (season)
     
-    [_seasons addObject: season]; //add to data model
+    [self.dataModel.seasons addObject: season]; //add to data model
     
     //add to screen
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:newRowIndex inSection:0];
@@ -170,7 +182,7 @@
     //edit already made in data model in SFVC
     //need to update display
     
-    NSInteger index = [_seasons indexOfObject: season];//locate the item being edited in the games array
+    NSInteger index = [self.dataModel.seasons indexOfObject: season];//locate the item being edited in the games array
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];//get the right cell
     
@@ -185,7 +197,7 @@
 - (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //First delete record from seasons array
-    [_seasons removeObjectAtIndex:indexPath.row];
+    [self.dataModel.seasons removeObjectAtIndex:indexPath.row];
     
     
     

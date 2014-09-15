@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Season : NSObject
+@interface Season : NSObject <NSCoding>
 
 @property (nonatomic, copy) NSString *seasonName;
 @property (nonatomic, copy) NSString *seasonDescription;
+
+@property (nonatomic, strong) NSMutableArray *games; //of Games objext
 
 @end

@@ -19,9 +19,9 @@
 
 @implementation GameListViewController
 
-{
-    NSMutableArray *_games;
-}
+
+
+/*
 
 #pragma mark - file operations
 
@@ -84,6 +84,7 @@
     }
     return self;
 }
+ */
 
 - (void)viewDidLoad
 {
@@ -106,7 +107,7 @@
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_games count];
+    return [self.season.games count];
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -115,7 +116,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GameSummary"];
     
     //load game variable from games array
-    Game *game = _games[indexPath.row];
+    Game *game = self.season.games[indexPath.row];
     
     [self configureDataForCell:cell withGame:game];//put data into correct labels in the cell
     
@@ -177,9 +178,9 @@
 
 - (void) gameFactsViewController:(GameFactsViewController *)controller didFinishAddingGame:(Game *)game
 {
-    NSInteger newRowIndex = [_games count]; //get location to add new record (game)
+    NSInteger newRowIndex = [self.season.games count]; //get location to add new record (game)
     
-    [_games addObject: game]; //add to data model
+    [self.season.games addObject: game]; //add to data model
     
     //add to screen
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:newRowIndex inSection:0];
@@ -189,7 +190,7 @@
     //UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];//get the right cell
     //[self configureDataForCell:cell withGame:game];//puts the game data into the labels in the cell
     
-    [self saveGames];//write the current data to the file
+    //[self saveGames];//write the current data to the file
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
@@ -200,13 +201,13 @@
     //edit already made in data model in GFVC
     //need to update display
     
-    NSInteger index = [_games indexOfObject: game];//locate the item being edited in the games array
+    NSInteger index = [self.season.games indexOfObject: game];//locate the item being edited in the games array
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];//get the right cell
     
     [self configureDataForCell:cell withGame:game];//puts the game data into the labels in the cell
     
-    [self saveGames];//write the current data to the file
+    //[self saveGames];//write the current data to the file
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
@@ -216,9 +217,9 @@
 - (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //First delete record from games array
-    [_games removeObjectAtIndex:indexPath.row];
+    [self.season.games removeObjectAtIndex:indexPath.row];
     
-    [self saveGames];//write the current data to the file
+    //[self saveGames];//write the current data to the file
     
     //Next delete row from the screen
     NSArray *indexPaths = @[indexPath];
@@ -232,7 +233,7 @@
 - (void) playerActionsViewController: (PlayerActionsViewController *) controller didEditGameData: (Game *) game
 {
     NSLog(@"Paased back shots %ld", (long) game.shotsOnGoal);
-    [self saveGames];
+    //[self saveGames];
     
     
 }
@@ -263,7 +264,7 @@
         //"sender" here is what was clicked, the detail disclosure icon
         //this identifies what game data to load to edit
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-        controller.gameToEdit = _games[indexPath.row];
+        controller.gameToEdit = self.season.games[indexPath.row];
         
     } else if ([segue.identifier isEqualToString:@"GameDetails"]) {
         
@@ -273,14 +274,14 @@
         
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         
-        controller.gameToEditPerformance = _games[indexPath.row];
+        controller.gameToEditPerformance = self.season.games[indexPath.row];
         NSLog(@"Data passed %ld", (long)controller.gameToEditPerformance.shotsOnGoal);
         
     }
 }
 
 #pragma mark - temporary methods
-
+/*
 - (void) createDummyData
 {
     
@@ -317,6 +318,6 @@
 
 }
 
-
+*/
  
 @end
