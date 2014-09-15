@@ -4,6 +4,21 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="aMF-Ke-7OH">
+            <objects>
+                <navigationController storyboardIdentifier="SeasonNavigationController" definesPresentationContext="YES" id="Xfq-Mh-EUE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vpV-Kh-2Ne">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Csv-1c-hfu" kind="relationship" relationship="rootViewController" id="TFu-we-5gn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F4Y-2V-WEB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="-829"/>
+        </scene>
         <!--Seasons View Controller - Seasons-->
         <scene sceneID="Uqr-n3-YWe">
             <objects>
@@ -17,19 +32,25 @@
                             <outlet property="delegate" destination="26E-id-wx4" id="hcS-o6-gJW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Seasons" id="1hb-yV-UTm"/>
+                    <navigationItem key="navigationItem" title="Seasons" id="1hb-yV-UTm">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="F8F-KZ-Qw1">
+                            <connections>
+                                <segue destination="Xfq-Mh-EUE" kind="modal" identifier="AddSeason" id="eop-vm-bn4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="ImQ-E9-H1a" kind="push" identifier="ShowGames" id="EYS-of-nzc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pgI-DZ-7zX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="292" y="-99"/>
+            <point key="canvasLocation" x="60" y="-111"/>
         </scene>
-        <!--Hockey Scorer View Controller - Games-->
+        <!--Game List View Controller - Games-->
         <scene sceneID="KBT-Od-GJ2">
             <objects>
-                <tableViewController id="ImQ-E9-H1a" customClass="HockeyScorerViewController" sceneMemberID="viewController">
+                <tableViewController id="ImQ-E9-H1a" customClass="GameListViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="22" sectionFooterHeight="22" id="2a6-ze-wmr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -563,7 +584,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="suK-1N-gUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-98" y="-99"/>
+            <point key="canvasLocation" x="-328" y="-111"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sdJ-YB-9qq">
@@ -641,6 +662,88 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rbj-Iu-V0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1093" y="1240"/>
+        </scene>
+        <!--Season Facts View Controller - Add Season-->
+        <scene sceneID="MIt-d9-sgR">
+            <objects>
+                <tableViewController id="Csv-1c-hfu" customClass="SeasonFactsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="tui-8I-ORv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="6eu-Rw-3nM">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="wLx-sq-v8A">
+                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wLx-sq-v8A" id="h6B-Jd-Sdj">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Season Name" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gmp-WQ-5R0">
+                                                    <rect key="frame" x="20" y="7" width="280" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <action selector="done" destination="Csv-1c-hfu" eventType="editingDidEndOnExit" id="sGV-mC-p6d"/>
+                                                        <outlet property="delegate" destination="Csv-1c-hfu" id="ryu-Xj-uG0"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="L8J-ML-enD">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Wv8-Zf-E6a">
+                                        <rect key="frame" x="0.0" y="163" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wv8-Zf-E6a" id="dln-fb-JvJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tW-nf-qrn">
+                                                    <rect key="frame" x="0.0" y="-6" width="320" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Csv-1c-hfu" id="5ms-cy-bXC"/>
+                            <outlet property="delegate" destination="Csv-1c-hfu" id="tgF-Rl-o7I"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add Season" id="yTO-CN-0rN">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="xr5-lq-MnX">
+                            <connections>
+                                <action selector="cancel" destination="Csv-1c-hfu" id="P0g-Zi-S2W"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="done" id="c8l-ZT-tes">
+                            <connections>
+                                <action selector="done" destination="Csv-1c-hfu" id="uOX-RF-3IF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneBarButton" destination="c8l-ZT-tes" id="D2A-Mm-yHJ"/>
+                        <outlet property="textField" destination="gmp-WQ-5R0" id="GEr-Zc-SQw"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1yF-Pf-Bni" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1083" y="-829"/>
         </scene>
     </scenes>
     <resources>

@@ -1,23 +1,23 @@
 //
-//  HockeyScorerViewController.m
+//  GameListViewController.m
 //  HockeyScorerTD
 //
 //  Created by Anne West on 9/1/14.
 //  Copyright (c) 2014 TDG. All rights reserved.
 //
 
-#import "HockeyScorerViewController.h"
+#import "GameListViewController.h"
 #import "Game.h"
 //So we can get the title of the game list
 #import "Season.h"
 
-@interface HockeyScorerViewController ()
+@interface GameListViewController ()
 
 
 
 @end
 
-@implementation HockeyScorerViewController
+@implementation GameListViewController
 
 {
     NSMutableArray *_games;
@@ -250,7 +250,7 @@
         //go down one level to get the GFVC
         GameFactsViewController *controller = (GameFactsViewController *) navigationController.topViewController;
         
-        //set the current controller (the HSVC) as the delegate for the GFVC
+        //set the current controller (the GLVC) as the delegate for the GFVC
         controller.delegate = self;
         
     } else if ([segue.identifier isEqualToString:@"EditGame"]) {

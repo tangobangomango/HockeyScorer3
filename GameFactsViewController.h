@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-//Define the delegate protocol to let this controller send data to the HockeyScorerViewController (the game list)
+//Define the delegate protocol to let this controller send data to the GameListViewController (the game list)
 @class GameFactsViewController;
 @class Game;
 
@@ -37,7 +37,7 @@
 @property (nonatomic, assign) BOOL datePickerIsShowing;
 @property (nonatomic, strong) UITextField *activeTextField;
 
-@property (nonatomic, strong) Game *gameToEdit;//will be nil for a new game; will hold game data if game already exists. Will be used in viewDidLoad of the GFVC and loaded in the delegate methods in HSVC
+@property (nonatomic, strong) Game *gameToEdit;//will be nil for a new game; will hold game data if game already exists. Will be used in viewDidLoad of the GFVC and loaded in the delegate methods in GLVC
 
 @property (nonatomic, weak) id <GameFactsViewControllerDelegate> delegate;//this lets this view controller refer to the delegate to be able to pass data
 

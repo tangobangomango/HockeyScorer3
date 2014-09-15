@@ -12,7 +12,7 @@
 @interface PlayerActionsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *opponentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
-- (IBAction)buttonTest:(UIButton *)sender;
+
 
 //Collection used here so can change button labels via fast enumeration
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *actionButtonCollection;

@@ -11,5 +11,6 @@
 @interface Season : NSObject
 
 @property (nonatomic, copy) NSString *seasonName;
+@property (nonatomic, copy) NSString *seasonDescription;
 
 @end

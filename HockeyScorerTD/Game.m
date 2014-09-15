@@ -14,7 +14,7 @@
 
 //keys in these two methods must match
 
-//needed by HSVC to prepare data for loading in loadGames method
+//needed by GLVC to prepare data for loading in loadGames method
 //NSKeyedUnarchiver there defaults to this init method becuase of protocol
 - (id) initWithCoder:(NSCoder *)aDecoder
 {
@@ -37,7 +37,7 @@
 }
 
 
-//needed by HSVC to prepare data for saving in saveGames method
+//needed by GLVC to prepare data for saving in saveGames method
 - (void) encodeWithCoder:(NSCoder *)aCoder
 {
     //separate encoder for each property

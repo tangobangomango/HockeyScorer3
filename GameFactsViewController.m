@@ -187,14 +187,14 @@
 - (IBAction) cancel
 {
     //Use delegate to execute cancel
-    //method here is a delegate method listed above and defined in the HSVC
+    //method here is a delegate method listed above and defined in the GLVC
     [self.delegate gameFactsViewControllerDidCancel:self];
 }
 
 -(IBAction) done
 {
-    //Use delegate to capture entered data and pass to HSVC
-    //methods here are delegate methods listed above and defined in the HSVC
+    //Use delegate to capture entered data and pass to GLVC
+    //methods here are delegate methods listed above and defined in the GLVC
     
     //see if the data was empty when view loaded
     if (self.gameToEdit == nil) {

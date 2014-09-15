@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-//Define the delegate protocol to let this controller send data to the HockeyScorerViewController (the game list)
+//Define the delegate protocol to let this controller send data to the GameListViewController (the game list)
 @class PlayerActionsViewController;
 @class Game;
 
@@ -25,7 +25,7 @@
     AVAudioPlayer *buttonBeep;
 }
 
-@property (nonatomic, strong) Game *gameToEditPerformance;// Will be used in viewDidLoad of the PPVC and loaded in the delegate methods in HSVC
+@property (nonatomic, strong) Game *gameToEditPerformance;// Will be used in viewDidLoad of the PPVC and loaded in the delegate methods in GLVC
 
 @property (nonatomic, weak) id <PlayerActionsViewControllerDelegate> delegate;//this lets this view controller refer to the delegate to be able to pass data
 

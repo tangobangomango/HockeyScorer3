@@ -1,5 +1,5 @@
 //
-//  HockeyScorerViewController.h
+//  GameListViewController.h
 //  HockeyScorerTD
 //
 //  Created by Anne West on 9/1/14.
@@ -14,7 +14,7 @@
 @class Season;
 
 
-@interface HockeyScorerViewController : UITableViewController <GameFactsViewControllerDelegate, PlayerActionsViewControllerDelegate>
+@interface GameListViewController : UITableViewController <GameFactsViewControllerDelegate, PlayerActionsViewControllerDelegate>
 
 @property (nonatomic, strong) Season *season;
 

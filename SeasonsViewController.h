@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SeasonFactsViewController.h"
 
-@interface SeasonsViewController : UITableViewController
+@interface SeasonsViewController : UITableViewController <SeasonFactsViewControllerDelegate>
 
 @end

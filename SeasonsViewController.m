@@ -9,7 +9,7 @@
 #import "SeasonsViewController.h"
 #import "Season.h"
 // needed so can pass the season name along. See prepareForSegue
-#import "HockeyScorerViewController.h"
+#import "GameListViewController.h"
 
 
 @interface SeasonsViewController ()
@@ -117,7 +117,7 @@
 //seque is to games list controller as seque between these views has identifier ShowGames
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //so we can pass the season name to the Games list/HSVC
+    //so we can pass the season name to the Games list/GLVC
     Season *season = _seasons[indexPath.row];
     
     
@@ -125,13 +125,103 @@
     [self performSegueWithIdentifier:@"ShowGames" sender:season];
 }
 
+//Not using a segue for accessory button, so need to do the transition manually
+-(void) tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    //locate the VC to be transitioned to (which is done via the containing navigation controller)
+    //Each VC has a self.storyboard property to refer to storyboard VC was loaded from
+    //Gives an identifier to the VC and instantiates it.
+    UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"SeasonNavigationController"];
+    
+    //Locates the SFVC and passes appropriate season to it
+    SeasonFactsViewController *controller = (SeasonFactsViewController *) navigationController.topViewController;
+    controller.delegate = self;
+    Season *season = _seasons[indexPath.row];
+    controller.seasonToEdit = season;
+    
+    //Notice here that controller is the navigation controller not the GFVC that is presented
+    [self presentViewController:navigationController animated:YES completion:nil];
+}
+
+#pragma mark - SFVC delegate methods
+
+- (void) seasonFactsViewControllerDidCancel:(SeasonFactsViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) seasonFactsViewController:(SeasonFactsViewController *)controller didFinishAddingSeason:(Season *)season
+{
+    NSInteger newRowIndex = [_seasons count]; //get location to add new record (season)
+    
+    [_seasons addObject: season]; //add to data model
+    
+    //add to screen
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:newRowIndex inSection:0];
+    NSArray *indexPaths = @[indexPath];
+    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) seasonFactsViewController:(SeasonFactsViewController *)controller didFinishEditingSeason:(Season *)season
+{
+    //edit already made in data model in SFVC
+    //need to update display
+    
+    NSInteger index = [_seasons indexOfObject: season];//locate the item being edited in the games array
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];//get the right cell
+    
+    cell.textLabel.text = season.seasonName;
+    
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+   
+}
+
+// This implements swipe to delete
+- (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //First delete record from seasons array
+    [_seasons removeObjectAtIndex:indexPath.row];
+    
+    
+    
+    //Next delete row from the screen
+    NSArray *indexPaths = @[indexPath];
+    [tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    
+}
+
+#pragma mark - Segue
+
+
 //Need to make the actual prep for the seque
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"ShowGames"]) {
         //Identify where the segue is going and pass the season "value" to that controller
-        HockeyScorerViewController *controller = segue.destinationViewController;
+        GameListViewController *controller = segue.destinationViewController;
         controller.season = sender;
+    } else if ([segue.identifier isEqualToString:@"AddSeason"]) {
+        
+        //Identify the current controller in two steps
+        
+        //Identify the navigation controller that hold the SFVC
+        UINavigationController *navigationController = segue.destinationViewController;
+        
+        //Step down
+        SeasonFactsViewController *controller = (SeasonFactsViewController *)navigationController.topViewController;
+        
+        //set the controller delegate to this SVC
+        
+        controller.delegate = self;
+        
+        //this not done in GFVC; must have to do with doing segues or table cells differently
+        controller.seasonToEdit = nil;
     }
 }
 
