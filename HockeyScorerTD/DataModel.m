@@ -8,6 +8,9 @@
 
 #import "DataModel.h"
 
+//so can deal with first time user
+#import "Season.h"
+
 @implementation DataModel
 
 #pragma mark - file operations
@@ -41,11 +44,13 @@
         NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData: data];//archiver created and connected to data
         
         self.seasons = [unarchiver decodeObjectForKey:@"Seasons"];
+        NSLog(@"Reading");
+        
         
         [unarchiver finishDecoding];//data now in seasons array
         
     } else {
-        
+        NSLog(@"Creating");
         self.seasons = [[NSMutableArray alloc] initWithCapacity:5];
     }
 }
@@ -58,9 +63,18 @@
     [archiver encodeObject:self.seasons forKey:@"Seasons"];//I believe key here needs to match class name that will be saved. It tells archiver how to encode object properly
     
     [archiver finishEncoding];//finish encoding, with data now in data structure
-    
+    NSLog(@"Writing");
     [data writeToFile:[self dataFilePath] atomically:YES];//write data structure to file determined above
     
+}
+
+//prepare user defaults method
+- (void) registerDefaults
+{
+    NSDictionary *dictionary = @{@"SeasonIndex" : @-1,
+                                 @"FirstTime" : @YES};
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];
 }
 
 - (id) init
@@ -69,8 +83,39 @@
     
     if (self) {
         [self loadSeasons];
+        [self registerDefaults];
+        [self handleFirstTime];
     }
     return self;
+}
+
+- (NSInteger) indexOfSelectedSeason
+{
+    return [[NSUserDefaults standardUserDefaults] integerForKey:@"SeasonIndex"];
+}
+
+- (void) setIndexOfSelectedSeason:(NSInteger)index
+{
+    [[NSUserDefaults standardUserDefaults] setInteger:index forKey:@"SeasonIndex"];
+}
+
+- (void) handleFirstTime
+{
+    BOOL firstTime = [[NSUserDefaults standardUserDefaults] boolForKey:@"FirstTime"];
+    
+    //Default is Yes, so if is first time, create a season and go to it
+    
+    if (firstTime) {
+        Season *season = [[Season alloc] init];
+        season.seasonName = @"Season";
+        
+        [self.seasons addObject:season];
+        [self setIndexOfSelectedSeason:0];
+        
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"FirstTime"];
+    }
+    
+    
 }
 
 

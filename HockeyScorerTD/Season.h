@@ -13,6 +13,9 @@
 @property (nonatomic, copy) NSString *seasonName;
 @property (nonatomic, copy) NSString *seasonDescription;
 
-@property (nonatomic, strong) NSMutableArray *games; //of Games objext
+@property (nonatomic, strong) NSMutableArray *games; //of Games object
+
+//- (void) sortGames;
+
 
 @end

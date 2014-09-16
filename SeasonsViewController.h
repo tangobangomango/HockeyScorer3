@@ -11,7 +11,7 @@
 
 @class DataModel;
 
-@interface SeasonsViewController : UITableViewController <SeasonFactsViewControllerDelegate>
+@interface SeasonsViewController : UITableViewController <SeasonFactsViewControllerDelegate, UINavigationControllerDelegate>
 
 //note that isn't an array, but the top level DataModel which defines itself as the array 
 @property (nonatomic, strong) DataModel *dataModel;

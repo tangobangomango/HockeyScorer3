@@ -9,6 +9,7 @@
 #import "PlayerResultsViewController.h"
 
 @interface PlayerResultsViewController ()
+- (IBAction)goalsStepper:(UIStepper *)sender;
 
 @end
 
@@ -27,6 +28,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSLog(@"%@",self.gameToEditPerformance.opponent);
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,4 +49,6 @@
 }
 */
 
+- (IBAction)goalsStepper:(UIStepper *)sender {
+}
 @end

@@ -40,4 +40,9 @@
     [aCoder encodeObject:self.games forKey:@"Games"];
 }
 
+/*- (void) sortGames
+{
+    [self.games sortUsingSelector:@selector(compare:)];
+}*/
+
 @end

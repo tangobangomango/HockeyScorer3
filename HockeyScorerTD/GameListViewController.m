@@ -21,70 +21,6 @@
 
 
 
-/*
-
-#pragma mark - file operations
-
-//Generic method to get location of apps documents directory
-- (NSString *) documentsDirectory
-{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths firstObject];
-    return documentsDirectory;
-}
-
-//set name of data file and construct full path
-- (NSString *) dataFilePath
-{
-    //NSLog(@"%@", [[self documentsDirectory] stringByAppendingPathComponent:@"HockeyScorer.plist"]);
-    return [[self documentsDirectory] stringByAppendingPathComponent:@"HockeyScorer.plist"];
-}
-
-//Must remember to adopt NSCoding in Game class and implement all keys for decoding and encodong
-
-- (void) loadGames
-{
-    NSString *path = [self dataFilePath];//for convenience below
-    
-    //if there is already a data file, unarchive/decode and load games array
-    //else create an empty arry to hold games
-    if ([[NSFileManager defaultManager] fileExistsAtPath: path]) {
-        
-        NSData *data = [[NSData alloc] initWithContentsOfFile: path];//data structure created and loaded with file data
-        NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData: data];//archiver created and connected to data
-        
-        _games = [unarchiver decodeObjectForKey:@"Games"];
-        
-        [unarchiver finishDecoding];//data now in games array
-        
-    } else {
-        
-        _games = [[NSMutableArray alloc] initWithCapacity:50];
-    }
-}
-
-- (void) saveGames
-{
-    NSMutableData *data = [[NSMutableData alloc] init];//data structure to hold the data to be saved after encoding
-    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
-    
-    [archiver encodeObject:_games forKey:@"Games"];//I believe key here needs to match class name that will be saved. It tells archiver how to encode object properly
-    
-    [archiver finishEncoding];//finish encoding, with data now in data structure
-    
-    [data writeToFile:[self dataFilePath] atomically:YES];//write data structure to file determined above
-    
-}
-
-- (id) initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];//this is WithCoder because VC has been saved by encoding in the storyboard
-    if (self) {
-        [self loadGames];
-    }
-    return self;
-}
- */
 
 - (void)viewDidLoad
 {
@@ -178,19 +114,21 @@
 
 - (void) gameFactsViewController:(GameFactsViewController *)controller didFinishAddingGame:(Game *)game
 {
-    NSInteger newRowIndex = [self.season.games count]; //get location to add new record (game)
+    //NSInteger newRowIndex = [self.season.games count]; //get location to add new record (game)
     
     [self.season.games addObject: game]; //add to data model
     
     //add to screen
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:newRowIndex inSection:0];
+    /*NSIndexPath *indexPath = [NSIndexPath indexPathForRow:newRowIndex inSection:0];
     NSArray *indexPaths = @[indexPath];
     [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
-    
+    */
     //UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];//get the right cell
     //[self configureDataForCell:cell withGame:game];//puts the game data into the labels in the cell
     
     //[self saveGames];//write the current data to the file
+    [self.season.games sortUsingSelector:@selector(compare:)];
+    [self.tableView reloadData];
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
@@ -201,13 +139,15 @@
     //edit already made in data model in GFVC
     //need to update display
     
-    NSInteger index = [self.season.games indexOfObject: game];//locate the item being edited in the games array
+    /*NSInteger index = [self.season.games indexOfObject: game];//locate the item being edited in the games array
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];//get the right cell
     
     [self configureDataForCell:cell withGame:game];//puts the game data into the labels in the cell
-    
+    */
     //[self saveGames];//write the current data to the file
+    [self.season.games sortUsingSelector:@selector(compare:)];
+    [self.tableView reloadData];
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
@@ -269,13 +209,22 @@
     } else if ([segue.identifier isEqualToString:@"GameDetails"]) {
         
         UITabBarController *tabBarController = segue.destinationViewController;
-        PlayerActionsViewController *controller = (PlayerActionsViewController *)[[tabBarController viewControllers] objectAtIndex:0];
-        controller.delegate = self;
+ 
+        PlayerActionsViewController *controllerPA = (PlayerActionsViewController *)[[tabBarController viewControllers] objectAtIndex:0];
+        controllerPA.delegate = self;
+        
+        PlayerActionsViewController *controllerPR = (PlayerActionsViewController *)[[tabBarController viewControllers] objectAtIndex:1];
+        //controllerPR.delegate = self;
+        
+        PlayerActionsViewController *controllerTR = (PlayerActionsViewController *)[[tabBarController viewControllers] objectAtIndex:2];
         
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         
-        controller.gameToEditPerformance = self.season.games[indexPath.row];
-        NSLog(@"Data passed %ld", (long)controller.gameToEditPerformance.shotsOnGoal);
+        controllerPA.gameToEditPerformance = self.season.games[indexPath.row];
+        controllerPR.gameToEditPerformance = self.season.games[indexPath.row];
+        controllerTR.gameToEditPerformance = self.season.games[indexPath.row];
+        
+        //NSLog(@"Data passed %ld", (long)controller.gameToEditPerformance.shotsOnGoal);
         
     }
 }

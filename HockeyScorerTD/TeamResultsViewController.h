@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Game.h"
 
 @interface TeamResultsViewController : UIViewController
+
+@property (nonatomic, strong) Game *gameToEditPerformance;// Will be used in viewDidLoad of the TRVC and loaded in the delegate methods in GLVC
+
 
 @end

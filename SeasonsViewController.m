@@ -88,6 +88,29 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    //make self the delegate to handle the nav controller's back button
+    
+    self.navigationController.delegate = self;
+    
+    //get the index saved in defaults
+    
+    NSInteger index = [self.dataModel indexOfSelectedSeason];
+    
+    //if index is not -1, go to the correct season
+    
+    if (index >= 0 && index < [self.dataModel.seasons count]) {
+        Season *season = self.dataModel.seasons[index];
+        
+        //go there
+        [self performSegueWithIdentifier:@"ShowGames" sender:season];
+    
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -125,10 +148,16 @@
     return cell;
 }
 
+#pragma mark - deal with user interactions
+
 //with the appraoch used here, no prototype cells so need to make seque here in code
 //seque is to games list controller as seque between these views has identifier ShowGames
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //store the index of the selected row so we can restore it later if we want
+    
+    [self.dataModel setIndexOfSelectedSeason:indexPath.row];
+    
     //so we can pass the season name to the Games list/GLVC
     Season *season = self.dataModel.seasons[indexPath.row];
     
@@ -206,6 +235,17 @@
     [tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
     
     
+}
+
+#pragma mark - UINavigationControllerDelegate methods to deal with user defaults
+
+- (void) navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    
+    //if back button in the GLV is pressed, and the VC that wil appear is self, reset the default game to -1 (for none)
+    if (viewController == self) {
+        [self.dataModel setIndexOfSelectedSeason:-1];
+    }
 }
 
 #pragma mark - Segue

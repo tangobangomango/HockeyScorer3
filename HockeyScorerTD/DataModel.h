@@ -14,4 +14,8 @@
 
 - (void) saveSeasons;
 
+//for tracking index of selected season
+-(NSInteger) indexOfSelectedSeason;
+-(void) setIndexOfSelectedSeason: (NSInteger) index;
+
 @end

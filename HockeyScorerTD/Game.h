@@ -26,4 +26,21 @@
 @property (nonatomic) NSInteger shifts;
 @property (nonatomic) NSInteger blockedShots;
 
+//used primarily in PlayerResultsViewController
+@property (nonatomic) NSInteger goals;
+@property (nonatomic) NSInteger assists;
+@property (nonatomic) NSInteger plus;
+@property (nonatomic) NSInteger minus;
+@property (nonatomic) NSInteger penaltyMinutes;
+@property (nonatomic) NSInteger penaltiesDrawn;
+@property (nonatomic) NSInteger shiftsPP;
+@property (nonatomic) NSInteger shiftsPK;
+@property (nonatomic, strong) NSString *position;
+@property (nonatomic, strong) NSString *notes;
+
+//used primarily in TeamResultsViewController
+@property (nonatomic) NSInteger teamGoals;
+@property (nonatomic) NSInteger opponentGoals;
+@property (nonatomic, strong) NSString *teamNotes;
+
 @end

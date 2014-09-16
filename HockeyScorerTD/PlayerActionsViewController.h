@@ -25,7 +25,7 @@
     AVAudioPlayer *buttonBeep;
 }
 
-@property (nonatomic, strong) Game *gameToEditPerformance;// Will be used in viewDidLoad of the PPVC and loaded in the delegate methods in GLVC
+@property (nonatomic, strong) Game *gameToEditPerformance;// Will be used in viewDidLoad of the PAVC and loaded in the delegate methods in GLVC
 
 @property (nonatomic, weak) id <PlayerActionsViewControllerDelegate> delegate;//this lets this view controller refer to the delegate to be able to pass data
 
