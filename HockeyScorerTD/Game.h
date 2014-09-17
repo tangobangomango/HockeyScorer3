@@ -26,6 +26,8 @@
 @property (nonatomic) NSInteger shifts;
 @property (nonatomic) NSInteger blockedShots;
 
+@property (nonatomic) BOOL editingEnabled;
+
 //used primarily in PlayerResultsViewController
 @property (nonatomic) NSInteger goals;
 @property (nonatomic) NSInteger assists;

@@ -100,8 +100,10 @@
         self.outletPositionSegCont.selectedSegmentIndex = 0;
     } else if ([self.gameToEditPerformance.position isEqualToString:@"C"]) {
         self.outletPositionSegCont.selectedSegmentIndex = 1;
-    } else {
+    } else if ([self.gameToEditPerformance.position isEqualToString:@"D"]){
         self.outletPositionSegCont.selectedSegmentIndex = 2;
+    } else {
+        self.outletPositionSegCont.selectedSegmentIndex = 0; //if nil set to W
     }
     
     

@@ -34,6 +34,8 @@
         self.shifts = [aDecoder decodeIntegerForKey:@"Shifts"];
         self.blockedShots = [aDecoder decodeIntegerForKey:@"BlockedShots"];
         
+        self.editingEnabled = [aDecoder decodeBoolForKey:@"EditingEnabled"];
+        
         self.goals = [aDecoder decodeIntegerForKey:@"Goals"];
         self.assists = [aDecoder decodeIntegerForKey:@"Assists"];
         self.plus = [aDecoder decodeIntegerForKey:@"Plus"];
@@ -72,6 +74,8 @@
     [aCoder encodeInteger:self.faceoffsLost forKey:@"FaceoffsLost"];
     [aCoder encodeInteger:self.shifts forKey:@"Shifts"];
     [aCoder encodeInteger:self.blockedShots forKey:@"BlockedShots"];
+    
+    [aCoder encodeBool:self.editingEnabled forKey:@"EditingEnabled"];
     
     [aCoder encodeInteger:self.goals forKey:@"Goals"];
     [aCoder encodeInteger:self.assists forKey:@"Assists"];

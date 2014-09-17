@@ -54,6 +54,13 @@
 - (IBAction)buttonShifts:(UIButton *)sender;
 - (IBAction)buttonBlocks:(UIButton *)sender;
 
+//Editing switch
+@property (weak, nonatomic) IBOutlet UISwitch *editingSwitch;
+- (IBAction)changeEditingSwitch:(UISwitch *)sender;
+@property (weak, nonatomic) IBOutlet UILabel *labelEditingAbleState;
+
+
+
 //Subtraction switch
 @property (weak, nonatomic) IBOutlet UISwitch *subtractionSwitch;
 - (IBAction)changeSubtractionSwitch:(UISwitch *)sender;
@@ -97,10 +104,20 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.parentViewController.navigationItem setTitle:self.gameToEditPerformance.opponent];//Puts the name of opponent in the top nave bar for all three tabs
-    self.dateLabel.text = [self convertDateOf:self.gameToEditPerformance.dateOfGame toFormat:@"MMM d, yyyy"];
+    //[self.parentViewController.navigationItem setTitle:self.gameToEditPerformance.opponent];
+    
+    //Puts the name of opponent and date in the top nave bar for all three tabs
+    NSString *opponent = self.gameToEditPerformance.opponent;
+    NSString *date = [self convertDateOf:self.gameToEditPerformance.dateOfGame toFormat:@"MMM d, yyyy"];
+    
+    [self setNavigationBarWithTitle:opponent andSubTitle:date];
+    
     [self setupGestureRecognizers];//for long presses
+    
     self.subtractionSwitch.on = NO;//to be sure not enabled
+    self.editingSwitch.on = self.gameToEditPerformance.editingEnabled;//enable based on past setting
+    [self processEditingSwitch];
+    
     [self loadDataInLabels];
     
     //setup sound to play when log press released
@@ -326,6 +343,35 @@
     }
 }
 
+- (void) processEditingSwitch
+{
+    if(self.editingSwitch.on == NO) {
+        
+        self.gameToEditPerformance.editingEnabled = NO;
+        self.subtractionSwitch.on = NO;
+        self.subtractionSwitch.enabled = NO;
+        self.labelSubtractionAbleState.text = @"Disabled";
+        self.labelEditingAbleState.text = @"Disabled";
+        for (UIButton *button in self.actionButtonCollection) {
+            [button setImage:[UIImage imageNamed:@"plus.png"] forState:UIControlStateNormal];
+            button.enabled = NO;
+        }
+    } else {
+        self.gameToEditPerformance.editingEnabled = YES;
+        self.subtractionSwitch.enabled = YES;
+        self.labelEditingAbleState.text = @"Enabled";
+        for (UIButton *button in self.actionButtonCollection) {
+            [button setImage:[UIImage imageNamed:@"plus.png"] forState:UIControlStateNormal];
+            button.enabled = YES;
+        }
+    }
+}
+
+- (IBAction)changeEditingSwitch:(UISwitch *)sender {
+    [self processEditingSwitch];
+
+}
+
 
 
 - (IBAction)changeSubtractionSwitch:(UISwitch *)sender {
@@ -334,13 +380,48 @@
         for (UIButton *button in self.actionButtonCollection) {
              [button setImage:[UIImage imageNamed:@"minus.png"] forState:UIControlStateNormal];
         }
-        self.labelSubtractionAbleState.text = @"Subtraction Enabled";
+        self.labelSubtractionAbleState.text = @"Enabled";
     } else {
         for (UIButton *button in self.actionButtonCollection) {
              [button setImage:[UIImage imageNamed:@"plus.png"] forState:UIControlStateNormal];
         }
-        self.labelSubtractionAbleState.text = @"Subtraction Disabled";
+        self.labelSubtractionAbleState.text = @"Disabled";
     }
+}
+
+- (void) setNavigationBarWithTitle: (NSString *) title andSubTitle: (NSString *) subtitle
+{
+    CGRect headerTitleSubtitleFrame = CGRectMake(0, 0, 200, 44);
+    UIView* _headerTitleSubtitleView = [[UILabel alloc] initWithFrame:headerTitleSubtitleFrame];
+    _headerTitleSubtitleView.backgroundColor = [UIColor clearColor];
+    _headerTitleSubtitleView.autoresizesSubviews = NO;
+    
+    CGRect titleFrame = CGRectMake(0, 2, 160, 24);
+    UILabel *titleView = [[UILabel alloc] initWithFrame:titleFrame];
+    titleView.backgroundColor = [UIColor clearColor];
+    titleView.font = [UIFont boldSystemFontOfSize:17];
+    titleView.textAlignment = NSTextAlignmentCenter;
+    titleView.textColor = [UIColor blackColor];
+    //titleView.shadowColor = [UIColor darkGrayColor];
+    //titleView.shadowOffset = CGSizeMake(0, -1);
+    titleView.text = title;
+    titleView.adjustsFontSizeToFitWidth = YES;
+    [_headerTitleSubtitleView addSubview:titleView];
+    
+    CGRect subtitleFrame = CGRectMake(0, 24, 160, 44-24);
+    UILabel *subtitleView = [[UILabel alloc] initWithFrame:subtitleFrame];
+    subtitleView.backgroundColor = [UIColor clearColor];
+    subtitleView.font = [UIFont boldSystemFontOfSize:13];
+    subtitleView.textAlignment = NSTextAlignmentCenter;
+    subtitleView.textColor = [UIColor grayColor];
+    //subtitleView.shadowColor = [UIColor darkGrayColor];
+    //subtitleView.shadowOffset = CGSizeMake(0, -1);
+    subtitleView.text = subtitle;
+    subtitleView.adjustsFontSizeToFitWidth = YES;
+    [_headerTitleSubtitleView addSubview:subtitleView];
+    
+    self.parentViewController.navigationItem.titleView = _headerTitleSubtitleView;
+    
 }
 
 
@@ -375,6 +456,7 @@
 
 - (IBAction)buttonBlocks:(UIButton *)sender {
 }
+
 
 
 @end
