@@ -395,7 +395,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Player Actions" image="cog_01.png" id="Cbu-C1-fiP"/>
+                    <tabBarItem key="tabBarItem" title="Player Actions" image="hockey-32.png" id="Cbu-C1-fiP"/>
                     <navigationItem key="navigationItem" id="Aft-d8-ZOy"/>
                     <connections>
                         <outlet property="dateLabel" destination="OhT-fl-e3e" id="Pal-VF-Sy6"/>
@@ -657,15 +657,27 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="dxc-qM-Zez">
                                 <rect key="frame" x="26" y="181" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="stepperTeamGoals:" destination="EfH-cu-xke" eventType="valueChanged" id="TvB-3N-gWh"/>
+                                </connections>
                             </stepper>
                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="DCR-y9-kWn">
                                 <rect key="frame" x="198" y="181" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="stepperOpponentGoals:" destination="EfH-cu-xke" eventType="valueChanged" id="WCC-Ne-TN5"/>
+                                </connections>
                             </stepper>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Team Results" id="Kjf-sL-JTs"/>
+                    <tabBarItem key="tabBarItem" title="Team Results" image="finish_flag-32.png" id="Kjf-sL-JTs"/>
+                    <connections>
+                        <outlet property="labelOpponentGoals" destination="yPc-pi-q82" id="Lhe-mL-VwH"/>
+                        <outlet property="labelTeamGoals" destination="8WD-04-BGY" id="K5N-IA-W2y"/>
+                        <outlet property="outletOpponentGoalsStepper" destination="DCR-y9-kWn" id="hTB-oA-OfR"/>
+                        <outlet property="outletTeamGoalsStepper" destination="dxc-qM-Zez" id="I0w-f8-jjT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JsT-yB-QrR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -747,13 +759,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Assists" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="he7-Tp-UYy">
-                                <rect key="frame" x="20" y="194" width="68" height="21"/>
+                                <rect key="frame" x="24" y="194" width="68" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5G-Zb-htq">
-                                <rect key="frame" x="33" y="219" width="42" height="21"/>
+                                <rect key="frame" x="37" y="219" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -771,13 +783,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PK Shifts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egt-AU-QN7">
-                                <rect key="frame" x="215" y="286" width="81" height="21"/>
+                                <rect key="frame" x="222" y="286" width="81" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAn-f4-jKG">
-                                <rect key="frame" x="228" y="311" width="42" height="21"/>
+                                <rect key="frame" x="243" y="311" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -813,31 +825,46 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="1ak-qQ-UIi">
-                                <rect key="frame" x="7" y="137" width="94" height="29"/>
+                                <rect key="frame" x="11" y="137" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <action selector="goalsStepper:" destination="nbZ-kq-bNI" eventType="valueChanged" id="qxw-0B-rQD"/>
+                                    <action selector="stepperGoals:" destination="nbZ-kq-bNI" eventType="valueChanged" id="oDl-pA-G9P"/>
                                 </connections>
                             </stepper>
                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="tba-Te-vZr">
                                 <rect key="frame" x="113" y="137" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="stepperPlus:" destination="nbZ-kq-bNI" eventType="valueChanged" id="KGd-1a-guE"/>
+                                </connections>
                             </stepper>
                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zzL-ss-M5v">
                                 <rect key="frame" x="215" y="137" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="stepperPenaltyMinutes:" destination="nbZ-kq-bNI" eventType="valueChanged" id="52g-x9-zdv"/>
+                                </connections>
                             </stepper>
                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="AnN-Qw-ElP">
-                                <rect key="frame" x="7" y="243" width="94" height="29"/>
+                                <rect key="frame" x="11" y="243" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="stepperAssists:" destination="nbZ-kq-bNI" eventType="valueChanged" id="pD2-5r-2sd"/>
+                                </connections>
                             </stepper>
                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="LgW-3t-FkZ">
                                 <rect key="frame" x="113" y="243" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="stepperMinus:" destination="nbZ-kq-bNI" eventType="valueChanged" id="8Br-mx-GgU"/>
+                                </connections>
                             </stepper>
                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="wgc-fC-hBh">
                                 <rect key="frame" x="215" y="243" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="stepperPenaltiesDrawn:" destination="nbZ-kq-bNI" eventType="valueChanged" id="aa7-Ju-q94"/>
+                                </connections>
                             </stepper>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fCs-bj-0kt">
                                 <rect key="frame" x="99" y="377" width="123" height="29"/>
@@ -847,27 +874,47 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <segment title="C"/>
                                     <segment title="D"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segcontPosition:" destination="nbZ-kq-bNI" eventType="valueChanged" id="8eZ-Dv-pxp"/>
+                                </connections>
                             </segmentedControl>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cWH-po-cJ1">
-                                <rect key="frame" x="40" y="412" width="240" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                            </textView>
                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="qZO-7r-mVl">
                                 <rect key="frame" x="11" y="335" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="stepperPPShifts:" destination="nbZ-kq-bNI" eventType="valueChanged" id="ZXk-Z5-x8z"/>
+                                </connections>
                             </stepper>
                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Hy2-x6-vl0">
-                                <rect key="frame" x="206" y="335" width="94" height="29"/>
+                                <rect key="frame" x="217" y="335" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="stepperPKShifts:" destination="nbZ-kq-bNI" eventType="valueChanged" id="XuW-Jo-Ja5"/>
+                                </connections>
                             </stepper>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Player Results" image="hockey-50.png" id="ryD-KD-M5C"/>
+                    <tabBarItem key="tabBarItem" title="Player Results" image="template-32.png" id="ryD-KD-M5C"/>
+                    <connections>
+                        <outlet property="labelAssists" destination="D5G-Zb-htq" id="dOr-jv-ZKv"/>
+                        <outlet property="labelGoals" destination="bbX-rE-Ss4" id="ZzI-2A-GGe"/>
+                        <outlet property="labelMinus" destination="TIv-hF-72a" id="6EA-c0-U8F"/>
+                        <outlet property="labelPKShifts" destination="XAn-f4-jKG" id="y0c-1f-eUw"/>
+                        <outlet property="labelPPShifts" destination="lWW-CD-r7O" id="QH6-mQ-PoG"/>
+                        <outlet property="labelPenaltiesDrawn" destination="YVa-Zf-uoM" id="RE2-gs-8L7"/>
+                        <outlet property="labelPenaltyMinutes" destination="VI5-ZN-9Ss" id="9tV-uA-Sj8"/>
+                        <outlet property="labelPlus" destination="nau-o4-BqT" id="QJq-mc-pzn"/>
+                        <outlet property="outletAssistsStepper" destination="AnN-Qw-ElP" id="RAn-DV-27X"/>
+                        <outlet property="outletGoalsStepper" destination="1ak-qQ-UIi" id="GNs-jS-Lhi"/>
+                        <outlet property="outletMinusStepper" destination="LgW-3t-FkZ" id="vE7-Zd-UB4"/>
+                        <outlet property="outletPKShifts" destination="Hy2-x6-vl0" id="ofv-rv-7fW"/>
+                        <outlet property="outletPPShifts" destination="qZO-7r-mVl" id="cOI-LT-LjB"/>
+                        <outlet property="outletPenaltiesDrawnStepper" destination="wgc-fC-hBh" id="4DF-nR-kKe"/>
+                        <outlet property="outletPenaltyMinutesStepper" destination="zzL-ss-M5v" id="qGF-kf-Psa"/>
+                        <outlet property="outletPlusStepper" destination="tba-Te-vZr" id="3Vb-NX-gKG"/>
+                        <outlet property="outletPositionSegCont" destination="fCs-bj-0kt" id="TQN-nN-YWr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rbj-Iu-V0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -916,7 +963,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tW-nf-qrn">
-                                                    <rect key="frame" x="0.0" y="-6" width="320" height="43"/>
+                                                    <rect key="frame" x="38" y="-6" width="233" height="154"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -957,9 +1004,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <resources>
-        <image name="cog_01.png" width="26" height="26"/>
-        <image name="hockey-50.png" width="50" height="50"/>
+        <image name="finish_flag-32.png" width="32" height="32"/>
+        <image name="hockey-32.png" width="32" height="32"/>
         <image name="plus" width="80" height="46"/>
+        <image name="template-32.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

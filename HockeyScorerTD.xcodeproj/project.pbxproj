@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		E20127DE19B62628005D0D8E /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = E20127DD19B62628005D0D8E /* Game.m */; };
 		E20127E119B63884005D0D8E /* GameFactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20127E019B63884005D0D8E /* GameFactsViewController.m */; };
+		E22D6D9B19C92EB100CC8215 /* bar_chart-32.png in Resources */ = {isa = PBXBuildFile; fileRef = E22D6D9419C92EB100CC8215 /* bar_chart-32.png */; };
+		E22D6D9C19C92EB100CC8215 /* database-32.png in Resources */ = {isa = PBXBuildFile; fileRef = E22D6D9519C92EB100CC8215 /* database-32.png */; };
+		E22D6D9D19C92EB100CC8215 /* finish_flag-32.png in Resources */ = {isa = PBXBuildFile; fileRef = E22D6D9619C92EB100CC8215 /* finish_flag-32.png */; };
+		E22D6D9E19C92EB100CC8215 /* hockey-32.png in Resources */ = {isa = PBXBuildFile; fileRef = E22D6D9719C92EB100CC8215 /* hockey-32.png */; };
+		E22D6D9F19C92EB100CC8215 /* info-32.png in Resources */ = {isa = PBXBuildFile; fileRef = E22D6D9819C92EB100CC8215 /* info-32.png */; };
+		E22D6DA019C92EB100CC8215 /* settings-32.png in Resources */ = {isa = PBXBuildFile; fileRef = E22D6D9919C92EB100CC8215 /* settings-32.png */; };
+		E22D6DA119C92EB100CC8215 /* template-32.png in Resources */ = {isa = PBXBuildFile; fileRef = E22D6D9A19C92EB100CC8215 /* template-32.png */; };
 		E258FD6E19C224A4003C4BB9 /* PlayerResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E258FD6D19C224A4003C4BB9 /* PlayerResultsViewController.m */; };
 		E258FD7319C22614003C4BB9 /* minus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E258FD6F19C22614003C4BB9 /* minus@2x.png */; };
 		E258FD7419C22614003C4BB9 /* plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E258FD7019C22614003C4BB9 /* plus@2x.png */; };
@@ -71,6 +78,13 @@
 		E20127DD19B62628005D0D8E /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		E20127DF19B63884005D0D8E /* GameFactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameFactsViewController.h; path = ../GameFactsViewController.h; sourceTree = "<group>"; };
 		E20127E019B63884005D0D8E /* GameFactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameFactsViewController.m; path = ../GameFactsViewController.m; sourceTree = "<group>"; };
+		E22D6D9419C92EB100CC8215 /* bar_chart-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar_chart-32.png"; sourceTree = "<group>"; };
+		E22D6D9519C92EB100CC8215 /* database-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "database-32.png"; sourceTree = "<group>"; };
+		E22D6D9619C92EB100CC8215 /* finish_flag-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "finish_flag-32.png"; sourceTree = "<group>"; };
+		E22D6D9719C92EB100CC8215 /* hockey-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hockey-32.png"; sourceTree = "<group>"; };
+		E22D6D9819C92EB100CC8215 /* info-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-32.png"; sourceTree = "<group>"; };
+		E22D6D9919C92EB100CC8215 /* settings-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-32.png"; sourceTree = "<group>"; };
+		E22D6D9A19C92EB100CC8215 /* template-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "template-32.png"; sourceTree = "<group>"; };
 		E258FD6C19C224A4003C4BB9 /* PlayerResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerResultsViewController.h; sourceTree = "<group>"; };
 		E258FD6D19C224A4003C4BB9 /* PlayerResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerResultsViewController.m; sourceTree = "<group>"; };
 		E258FD6F19C22614003C4BB9 /* minus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "minus@2x.png"; sourceTree = "<group>"; };
@@ -241,6 +255,13 @@
 		E2A3C1C719B5122600284F74 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E22D6D9419C92EB100CC8215 /* bar_chart-32.png */,
+				E22D6D9519C92EB100CC8215 /* database-32.png */,
+				E22D6D9619C92EB100CC8215 /* finish_flag-32.png */,
+				E22D6D9719C92EB100CC8215 /* hockey-32.png */,
+				E22D6D9819C92EB100CC8215 /* info-32.png */,
+				E22D6D9919C92EB100CC8215 /* settings-32.png */,
+				E22D6D9A19C92EB100CC8215 /* template-32.png */,
 				E26FF6D619C7B91800A940ED /* emmaAsAppIcon.png */,
 				E26FF6D719C7B91800A940ED /* graph_bar_trend@2x.png */,
 				E26FF6D819C7B91800A940ED /* graph_bar@2x.png */,
@@ -364,12 +385,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2A3C1D919B5122600284F74 /* Images.xcassets in Resources */,
+				E22D6D9D19C92EB100CC8215 /* finish_flag-32.png in Resources */,
 				E2DCB4BE19C3BC67004837DC /* rink.png in Resources */,
 				E26FF6E019C7B91800A940ED /* emmaAsAppIcon.png in Resources */,
 				E2DCB4C019C3BC76004837DC /* faceoff.png in Resources */,
+				E22D6DA019C92EB100CC8215 /* settings-32.png in Resources */,
 				E26FF6E219C7B91800A940ED /* graph_bar@2x.png in Resources */,
 				E26FF6E419C7B91800A940ED /* megaphone-50.png in Resources */,
 				E26FF6D119C7B8B600A940ED /* bar_chart-50.png in Resources */,
+				E22D6D9B19C92EB100CC8215 /* bar_chart-32.png in Resources */,
+				E22D6D9E19C92EB100CC8215 /* hockey-32.png in Resources */,
 				E2DCB4C219C49CA6004837DC /* rink3.png in Resources */,
 				E26FF6E519C7B91800A940ED /* newspaper@2x.png in Resources */,
 				E26FF6D519C7B8CF00A940ED /* emma opensans2-65bkgd.png in Resources */,
@@ -379,10 +404,13 @@
 				E258FD7319C22614003C4BB9 /* minus@2x.png in Resources */,
 				E2A3C1CB19B5122600284F74 /* InfoPlist.strings in Resources */,
 				E26FF6E619C7B91800A940ED /* opened_folder-50.png in Resources */,
+				E22D6DA119C92EB100CC8215 /* template-32.png in Resources */,
 				E26FF6E919C7B91800A940ED /* template-50.png in Resources */,
 				E26FF6D219C7B8B600A940ED /* cog_01@2x.png in Resources */,
 				E26FF6E319C7B91800A940ED /* hockey-50.png in Resources */,
+				E22D6D9F19C92EB100CC8215 /* info-32.png in Resources */,
 				E258FD7619C22614003C4BB9 /* minus.png in Resources */,
+				E22D6D9C19C92EB100CC8215 /* database-32.png in Resources */,
 				E26FF6E119C7B91800A940ED /* graph_bar_trend@2x.png in Resources */,
 				E2FAF2A119C3508D004C2172 /* SecondBeep.wav in Resources */,
 				E26FF6D319C7B8B600A940ED /* database@2x.png in Resources */,

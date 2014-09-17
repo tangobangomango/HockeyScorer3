@@ -10,6 +10,26 @@
 
 @interface TeamResultsViewController ()
 
+//label outlets
+@property (weak, nonatomic) IBOutlet UILabel *labelTeamGoals;
+
+@property (weak, nonatomic) IBOutlet UILabel *labelOpponentGoals;
+
+
+//stepper outlets
+@property (weak, nonatomic) IBOutlet UIStepper *outletTeamGoalsStepper;
+
+@property (weak, nonatomic) IBOutlet UIStepper *outletOpponentGoalsStepper;
+
+
+//stepper actions
+- (IBAction)stepperTeamGoals:(UIStepper *)sender;
+
+- (IBAction)stepperOpponentGoals:(UIStepper *)sender;
+
+
+
+
 @end
 
 @implementation TeamResultsViewController
@@ -27,12 +47,22 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self loadDataInLabelsAndSteppers];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) loadDataInLabelsAndSteppers
+{
+    self.labelTeamGoals.text = [NSString stringWithFormat:@"%ld", (long) self.gameToEditPerformance.teamGoals];
+    self.labelOpponentGoals.text = [NSString stringWithFormat:@"%ld", (long) self.gameToEditPerformance.opponentGoals];
+    
+    [self.outletTeamGoalsStepper setValue:(double) self.gameToEditPerformance.teamGoals];
+    [self.outletOpponentGoalsStepper setValue:self.gameToEditPerformance.opponentGoals];
 }
 
 /*
@@ -46,4 +76,16 @@
 }
 */
 
+
+
+- (IBAction)stepperTeamGoals:(UIStepper *)sender {
+    self.gameToEditPerformance.teamGoals = sender.value;
+    NSLog(@"%f", sender.value);
+    self.labelTeamGoals.text = [NSString stringWithFormat:@"%ld", (long) self.gameToEditPerformance.teamGoals];
+}
+
+- (IBAction)stepperOpponentGoals:(UIStepper *)sender {
+    self.gameToEditPerformance.opponentGoals = sender.value;
+    self.labelOpponentGoals.text = [NSString stringWithFormat:@"%ld", (long) self.gameToEditPerformance.opponentGoals];
+}
 @end

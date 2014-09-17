@@ -105,6 +105,8 @@
     
     //setup sound to play when log press released
     buttonBeep = [self setupAudioPlayerWithFile:@"ButtonTap" type:@"wav"];
+    [buttonBeep setVolume:0.5];
+    [buttonBeep prepareToPlay];
 }
 
 //can load without checking to see if data exists since nil will be treated as zero
@@ -318,8 +320,7 @@
             self.labelBlocks.text = [NSString stringWithFormat:@"%ld", (long) self.gameToEditPerformance.blockedShots];
             
         }
-        [buttonBeep setVolume:0.5];
-        [buttonBeep prepareToPlay];
+        
         [buttonBeep play];
         [self.delegate playerActionsViewController:self didEditGameData:self.gameToEditPerformance];
     }
