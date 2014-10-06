@@ -218,11 +218,15 @@
         
         PlayerActionsViewController *controllerTR = (PlayerActionsViewController *)[[tabBarController viewControllers] objectAtIndex:2];
         
+        
+        
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         
         controllerPA.gameToEditPerformance = self.season.games[indexPath.row];
         controllerPR.gameToEditPerformance = self.season.games[indexPath.row];
         controllerTR.gameToEditPerformance = self.season.games[indexPath.row];
+        
+        
         
         //NSLog(@"Data passed %ld", (long)controller.gameToEditPerformance.shotsOnGoal);
         

@@ -49,6 +49,10 @@
 		E2A3C1E219B5122600284F74 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3C1C419B5122600284F74 /* UIKit.framework */; };
 		E2A3C1EA19B5122600284F74 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2A3C1E819B5122600284F74 /* InfoPlist.strings */; };
 		E2A3C1EC19B5122600284F74 /* HockeyScorerTDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A3C1EB19B5122600284F74 /* HockeyScorerTDTests.m */; };
+		E2AC97F219CA4AB000E0228E /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AC97F119CA4AB000E0228E /* TPKeyboardAvoidingTableView.m */; };
+		E2AC97F519CA4B0A00E0228E /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AC97F419CA4B0A00E0228E /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		E2AC97FA19CA4B2F00E0228E /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AC97F719CA4B2F00E0228E /* TPKeyboardAvoidingCollectionView.m */; };
+		E2AC97FB19CA4B2F00E0228E /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AC97F919CA4B2F00E0228E /* TPKeyboardAvoidingScrollView.m */; };
 		E2C70AE119BE1A2800ED041D /* PlayerActionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C70AE019BE1A2800ED041D /* PlayerActionsViewController.m */; };
 		E2C70AE419BE1D4200ED041D /* TeamResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C70AE319BE1D4200ED041D /* TeamResultsViewController.m */; };
 		E2DCB4BE19C3BC67004837DC /* rink.png in Resources */ = {isa = PBXBuildFile; fileRef = E2DCB4BD19C3BC67004837DC /* rink.png */; };
@@ -124,6 +128,14 @@
 		E2A3C1E719B5122600284F74 /* HockeyScorerTDTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HockeyScorerTDTests-Info.plist"; sourceTree = "<group>"; };
 		E2A3C1E919B5122600284F74 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E2A3C1EB19B5122600284F74 /* HockeyScorerTDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HockeyScorerTDTests.m; sourceTree = "<group>"; };
+		E2AC97F019CA4AB000E0228E /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		E2AC97F119CA4AB000E0228E /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		E2AC97F319CA4B0A00E0228E /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		E2AC97F419CA4B0A00E0228E /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		E2AC97F619CA4B2F00E0228E /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		E2AC97F719CA4B2F00E0228E /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		E2AC97F819CA4B2F00E0228E /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		E2AC97F919CA4B2F00E0228E /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		E2C70ADF19BE1A2800ED041D /* PlayerActionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerActionsViewController.h; sourceTree = "<group>"; };
 		E2C70AE019BE1A2800ED041D /* PlayerActionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerActionsViewController.m; sourceTree = "<group>"; };
 		E2C70AE219BE1D4200ED041D /* TeamResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamResultsViewController.h; sourceTree = "<group>"; };
@@ -203,6 +215,21 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		E296355319D9FEDD002051AB /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E2AC97F619CA4B2F00E0228E /* TPKeyboardAvoidingCollectionView.h */,
+				E2AC97F719CA4B2F00E0228E /* TPKeyboardAvoidingCollectionView.m */,
+				E2AC97F819CA4B2F00E0228E /* TPKeyboardAvoidingScrollView.h */,
+				E2AC97F919CA4B2F00E0228E /* TPKeyboardAvoidingScrollView.m */,
+				E2AC97F319CA4B0A00E0228E /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				E2AC97F419CA4B0A00E0228E /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+				E2AC97F019CA4AB000E0228E /* TPKeyboardAvoidingTableView.h */,
+				E2AC97F119CA4AB000E0228E /* TPKeyboardAvoidingTableView.m */,
+			);
+			name = "Helper Classes";
+			sourceTree = "<group>";
+		};
 		E2A3C1B419B5122600284F74 = {
 			isa = PBXGroup;
 			children = (
@@ -237,10 +264,11 @@
 		E2A3C1C619B5122600284F74 /* HockeyScorerTD */ = {
 			isa = PBXGroup;
 			children = (
-				E258FD7719C22806003C4BB9 /* View Controllers */,
 				E2A3C1CF19B5122600284F74 /* HockeyScorerAppDelegate.h */,
 				E2A3C1D019B5122600284F74 /* HockeyScorerAppDelegate.m */,
 				E2A3C1D219B5122600284F74 /* Main.storyboard */,
+				E296355319D9FEDD002051AB /* Helper Classes */,
+				E258FD7719C22806003C4BB9 /* View Controllers */,
 				E258FD7819C22819003C4BB9 /* Model */,
 				E2A3C1D819B5122600284F74 /* Images.xcassets */,
 				E258FD6F19C22614003C4BB9 /* minus@2x.png */,
@@ -438,11 +466,15 @@
 				E2DCB4C819C4AE92004837DC /* Season.m in Sources */,
 				E2A3C1CD19B5122600284F74 /* main.m in Sources */,
 				E2DCB4CB19C4C27D004837DC /* SeasonFactsViewController.m in Sources */,
+				E2AC97F519CA4B0A00E0228E /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				E2A3C1D119B5122600284F74 /* HockeyScorerAppDelegate.m in Sources */,
 				E2A3C1D719B5122600284F74 /* GameListViewController.m in Sources */,
+				E2AC97F219CA4AB000E0228E /* TPKeyboardAvoidingTableView.m in Sources */,
 				E2F3ED3419C753E800AA3BF3 /* DataModel.m in Sources */,
 				E20127E119B63884005D0D8E /* GameFactsViewController.m in Sources */,
+				E2AC97FB19CA4B2F00E0228E /* TPKeyboardAvoidingScrollView.m in Sources */,
 				E20127DE19B62628005D0D8E /* Game.m in Sources */,
+				E2AC97FA19CA4B2F00E0228E /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				E2C70AE419BE1D4200ED041D /* TeamResultsViewController.m in Sources */,
 				E258FD6E19C224A4003C4BB9 /* PlayerResultsViewController.m in Sources */,
 				E2C70AE119BE1A2800ED041D /* PlayerActionsViewController.m in Sources */,

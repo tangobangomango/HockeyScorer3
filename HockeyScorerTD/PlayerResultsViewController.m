@@ -44,6 +44,7 @@
 //segmented control
 @property (weak, nonatomic) IBOutlet UISegmentedControl *outletPositionSegCont;
 - (IBAction)segcontPosition:(UISegmentedControl *)sender;
+@property (weak, nonatomic) IBOutlet UILabel *labelEnabled;
 
 
 @end
@@ -106,7 +107,11 @@
         self.outletPositionSegCont.selectedSegmentIndex = 0; //if nil set to W
     }
     
-    
+    if (self.gameToEditPerformance.editingEnabled == YES) {
+        self.labelEnabled.text = @"Enabled";
+    } else {
+        self.labelEnabled.text = @"Disabled";
+    }
     
 }
 

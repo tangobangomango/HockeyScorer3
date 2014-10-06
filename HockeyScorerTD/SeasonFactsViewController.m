@@ -35,7 +35,7 @@
         
         //Populate display with existing data
         self.textField.text = self.seasonToEdit.seasonName;
-        //self.descriptionTextView.text = self.seasonToEdit.seasonDescription;
+        self.descriptionTextView.text = self.seasonToEdit.seasonDescription;
         
     }
     
@@ -82,14 +82,14 @@
         Season *season = [[Season alloc] init];
         season.seasonName = self.textField.text;
         NSLog(@"Season %@", season.seasonName);
-        //season.seasonDescription = self.descriptionTextView.text;
+        season.seasonDescription = self.descriptionTextView.text;
         
         
         [self.delegate seasonFactsViewController:self didFinishAddingSeason:season];
         
     } else {
         self.seasonToEdit.seasonName = self.textField.text;//updates data model; will update display in delegate method
-        //self.seasonToEdit.seasonDescription = self.descriptionTextView.text;
+        self.seasonToEdit.seasonDescription = self.descriptionTextView.text;
         
         [self.delegate seasonFactsViewController: self didFinishEditingSeason:self.seasonToEdit];
     }

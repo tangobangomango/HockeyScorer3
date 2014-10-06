@@ -29,6 +29,7 @@
     
     if (self) {
         self.seasonName = [aDecoder decodeObjectForKey:@"SeasonName"];
+        self.seasonDescription = [aDecoder decodeObjectForKey:@"SeasonDescription"];
         self.games =[aDecoder decodeObjectForKey:@"Games"];
     }
     return self;
@@ -37,6 +38,7 @@
 - (void) encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.seasonName forKey:@"SeasonName"];
+    [aCoder encodeObject:self.seasonDescription forKey:@"SeasonDescription"];
     [aCoder encodeObject:self.games forKey:@"Games"];
 }
 

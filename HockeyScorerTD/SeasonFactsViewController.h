@@ -31,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 //@property (nonatomic, weak) UITextField *textField;
 //@property (nonatomic, weak) UITextView *descriptionTextView;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 
 //outlet for the done bar button. (cancel button handled by Nav controller, I think.)
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *doneBarButton;

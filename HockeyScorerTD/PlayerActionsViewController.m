@@ -118,6 +118,8 @@
     self.editingSwitch.on = self.gameToEditPerformance.editingEnabled;//enable based on past setting
     [self processEditingSwitch];
     
+    
+    
     [self loadDataInLabels];
     
     //setup sound to play when log press released
@@ -367,6 +369,8 @@
     }
 }
 
+
+
 - (IBAction)changeEditingSwitch:(UISwitch *)sender {
     [self processEditingSwitch];
 
@@ -391,7 +395,7 @@
 
 - (void) setNavigationBarWithTitle: (NSString *) title andSubTitle: (NSString *) subtitle
 {
-    CGRect headerTitleSubtitleFrame = CGRectMake(0, 0, 200, 44);
+    CGRect headerTitleSubtitleFrame = CGRectMake(0, 0, 160, 44);
     UIView* _headerTitleSubtitleView = [[UILabel alloc] initWithFrame:headerTitleSubtitleFrame];
     _headerTitleSubtitleView.backgroundColor = [UIColor clearColor];
     _headerTitleSubtitleView.autoresizesSubviews = NO;
